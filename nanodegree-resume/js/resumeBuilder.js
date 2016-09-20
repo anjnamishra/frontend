@@ -137,6 +137,7 @@ for(i in formattedContactInfo) {
 }
 
 
+
 function displayWork() {
 
 	if(work.jobs.length > 0) {
