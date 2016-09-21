@@ -55,14 +55,14 @@ var education = {
             "name": "University of RDVV",
             "location": "Jabalpur, MP, india",
             "degree": "Master of sceince",
-            "major": "Computer Science, electronics",
+            "majors": "Computer Science, electronics",
             "dates": "2006-2008",
             "url": "http://www.rdunijbpin.org/"
         }, {
             "name": "University of RDVV",
             "location": "Jabalpur, MP, india",
             "degree": "Bachelor of sceince",
-            "major": "Computer Science, electronics",
+            "majors": "Computer Science, electronics",
             "dates": "2003-2006",
             "url": "http://www.rdunijbpin.org/"
         }
