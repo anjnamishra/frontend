@@ -48,21 +48,21 @@ var education = {
             "name": "University of RDVV",
             "location": "Jabalpur, MP, india",
             "degree": "Post graduate deploma in Computer application",
-            "majors": "Computer Science",
+            "majors": ["Computer Science","information Technology"],
             "dates": "2008-2009",
             "url": "http://www.rdunijbpin.org/"
         }, {
             "name": "University of RDVV",
             "location": "Jabalpur, MP, india",
             "degree": "Master of sceince",
-            "majors": "Computer Science, electronics",
+            "majors": ["Computer Science, electronics"],
             "dates": "2006-2008",
             "url": "http://www.rdunijbpin.org/"
         }, {
             "name": "University of RDVV",
             "location": "Jabalpur, MP, india",
             "degree": "Bachelor of sceince",
-            "majors": "Computer Science, electronics",
+            "majors": ["Computer Science, electronics"],
             "dates": "2003-2006",
             "url": "http://www.rdunijbpin.org/"
         }
@@ -149,12 +149,17 @@ education.display = function() {
             var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[indexCount].degree);
             var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[indexCount].dates);
             var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[indexCount].location);
-            var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[indexCount].majors);
+
+
+            if ( education.schools[indexCount].majors.length > 0) {
+                for (var indexCount1 = 0; indexCount1 <  education.schools[indexCount1].majors.length; indexCount1++) {
+                  $(".education-entry:last").append(HTMLschoolMajor.replace("%data%", education.schools[indexCount].majors[indexCount1]));
+                }
+            }
 
             $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
             $(".education-entry:last").append(formattedSchoolDates);
             $(".education-entry:last").append(formattedSchoolLocation);
-            $(".education-entry:last").append(formattedSchoolMajor);
         }
 
         if (education.onlineCourses.length > 0) {
